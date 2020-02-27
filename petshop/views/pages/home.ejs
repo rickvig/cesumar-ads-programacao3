@@ -1,0 +1,25 @@
+<%- contentFor('body') %>
+<h1>Pessoas</h1>
+
+<div class="row">
+    <% for (pessoa of pessoas){%>
+    <div class="col-xs-1-12 p-2">
+        <div class="card" >
+            <img class="card-img-top" src="https://via.placeholder.com/250" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"><%= pessoa.nome %> <%= pessoa.sobrenome %></h5>
+                <p class="card-text">CPF/CNPJ:
+                    <% if (pessoa.cpf) { %>
+                    <%= pessoa.cpf %>
+                    <% } %>
+                    <% if (pessoa.cnpj) { %>
+                    <%= pessoa.cnpj %>
+                    <% } %>
+                </p>
+                <a href="#" class="btn btn-primary">Editar</a>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+</div>
