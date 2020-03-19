@@ -13,10 +13,10 @@ connection.query(
         console.log(result);
     });
 
-// connection.query(
-//     'SELECT * FROM users WHERE id > ? ',
-//     [2],
-//     (err, results) => {
-//         // console.log(results);
-//     }
-// );
+connection.query(
+    'SELECT * FROM users WHERE id > ? ',
+    [2],
+    (err, results) => {
+        // console.log(results);
+    }
+);
